@@ -1,0 +1,71 @@
+{
+  "name": "react-stack-grid",
+  "version": "0.8.0",
+  "description": "Pinterest like layout components for React.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "npm run docs",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "test": "npm run test:lint && npm run test:typecheck && npm run test:unit",
+    "test:lint": "eslint \"src/**/*.js\" \"docs/js/**/*.js\"",
+    "test:typecheck": "tsc --no-emit",
+    "test:unit": "jest",
+    "test:watch": "npm run test:unit -- --watch",
+    "docs": "webpack-dev-server --config docs/webpack.config.js",
+    "docs:build": "webpack -p --config docs/webpack.config.production.js",
+    "docs:deploy": "npm run docs:build && gh-pages -d docs",
+    "prepare": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsuyoshiwada/react-stack-grid.git"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "layout",
+    "grid",
+    "pinterest",
+    "masonry"
+  ],
+  "author": "tsuyoshiwada",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tsuyoshiwada/react-stack-grid/issues"
+  },
+  "homepage": "https://github.com/tsuyoshiwada/react-stack-grid#readme",
+  "files": [
+    "lib",
+    "test"
+  ],
+  "devDependencies": {
+    "@types/exenv": "^1.2.0",
+    "@types/inline-style-prefixer": "^5.0.0",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@types/react-transition-group": "^4.4.1",
+    "@types/shallowequal": "^1.1.1",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "eslint": "^7.23.0",
+    "eslint-plugin-react": "^7.23.1",
+    "rimraf": "^2.6.1",
+    "typescript": "4.1.2"
+  },
+  "peerDependencies": {
+    "react": ">=15.3.0 <= 17",
+    "react-dom": ">=15.3.0"
+  },
+  "dependencies": {
+    "easy-css-transform-builder": "0.1.0",
+    "exenv": "^1.2.1",
+    "imagesloaded": "^4.1.1",
+    "inline-style-prefixer": "5.1.2",
+    "invariant": "^2.2.2",
+    "prop-types": "^15.5.10",
+    "react-sizeme": "^3.0.1",
+    "react-transition-group": "^4.4.1",
+    "shallowequal": "^1.1.0"
+  }
+}
